@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>String 객체 사용하기</h3>
+    <hr>
+<script>
+    var a = new String("Boys and Girls");
+    var b = "!!";
+    //문자열 - 문자(한개의 단어)
+    document.writeln(a.charAt(0)+"<br>");      //a에있는 첫글자 B가 나온다.
+    //concot 메소드는 가변인수로 선언이 되어있다.
+    document.writeln(a.concat(b,"입니다")+"<br>"); 
+    document.writeln(a.concat(b)+"<br>"); 
+    document.writeln(a.concat(b,"a","bb","cc")+"<br>"); 
+    document.writeln(a.indexOf('s')+"<br>");       //s라는 문자가 첫번째에 나오는 곳
+    document.writeln(a.lastIndexOf('s')+"<br>"); // 뒤에서 부터 검색
+    document.writeln(a.indexOf('and')+"<br>");
+    document.writeln(a.indexOf('And')+"<br>");
+    document.writeln(a.slice(5,8)+"<br>");           // 5~8까지의 단어추출
+    document.writeln(a.toUpperCase()+"<br>");       //대문자로
+    document.writeln(a.replace("and","or")+"<br>"); //  ex. end가 or로 바뀌는것 
+    document.writeln("     simba       ".trim()+"<br>");   //  공백을 제거할때
+    var sub = a.split("");  //빈칸을 구분자로 분리
+    for(i=0; i<sub.length;i++){
+        document.writeln(sub[i]);
+    } document.writeln("<hr>")
+    var s = "https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=102&oid=421&aid=0004515570";
+/*mode
+ mid
+ sid1
+ oid...
+ aid
+ ---------------
+ LSD
+ shm
+ 102
+ 102....*/
+var s1 = s.slice(s.indexOf('?')+1);
+document.writeln(s1);
+
+var s2 = s1.split('&');
+document.writeln("<br>");
+document.writeln(s2);
+document.writeln("<br>");
+
+for(i=0;i<s2.length;i++){
+    //document.writeln(s2[i]+"<br>");
+    sss = s2[i].split("=");
+document.writeln(sss[0]+"<br>");
+}
+for(i=0;i<s2.length;i++){
+    //document.writeln(s2[i]+"<br>");
+    sss = s2[i].split("=");
+document.writeln(sss[1]+"<br>");}
+</script>
+</body>
+</html>
+
+<!-- var len = sindexOf('?')
+     var  s2 = slice(len)    으로도 표현가능-->

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3,li{color:brown} /*동일한 색을 주려면 콤마로도 가능하다*/
+        ul strong{color: dodgerblue;}
+        /*자손 셀렉터 : 자손 관계인 2 개 이상의 태그 나열*/
+        div>div>strong{background: yellow;}
+        /*자식 셀렉터 : 부모 자식 관계인 두 셀렉터를 ‘>’ 기호로 조합*/
+        body.main{background: aliceblue;}   
+        #list {background: mistyrose;}  /* id방식*/
+        #list span{color: green;}
+        .warning{color: red;}            /*class 방식*/     
+        h3::first-letter{color: red;}         
+        /*가상 클래스, first-letter는 첫번째 글자를 의미한다*/
+        li:hover{background: yellowgreen;}
+        /*hover : 마우스를 가져다대면 설정한 색으로 변한다.
+        태그 후에 콜론(:)이 나오면 가상클래스 (4장 28)*/ 
+        </style>
+</head>
+<body class="main">
+    <h3>Web Programming</h3>
+    <hr>
+    <div> 
+        <div>2학기 <strong>학습 내용</strong>입니다.</div>
+        <ul id="list">
+             <li><span>HTML5</span></li>
+            <li><strong>CSS</strong></li>
+            <li>JAVASCRIPT</li>
+        </ul>
+        <div class="warning">60점 이하는 F</div>
+    </div>
+</body>
+</html>
+<!--id 앞에 #을 붙여서 적용한다.
+class는 앞에 .을 붙여서 적용한다.-->

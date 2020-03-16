@@ -1,0 +1,39 @@
+<!--웹폼-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <script>
+        function check(){
+            alert("보이나요?");
+            f = document.frm; 
+            if(f.id.value==""){
+                alert("아이디를 입력하세요");
+                return;
+            }
+    }
+    </script>
+    <!--boby의 영역을 document 라고 부른다.-->
+</head>
+<body>
+    <h3>로그인 폼</h3>
+    <form name="frm" method="" action=""> <!--!!!...기본으로 들어가야 하는값-->
+    ID:<input type="text"size="15" name="id" value=""><br> <!--text가 가장많이쓰임-->
+    PWD:<input type="text"size="15" name="pwd"><br>
+    <input type="submit" value="로그인" onclick="check()">
+    </form>
+    <!--form과 input에는 반드시 name값이 들어가야한다.-->
+    <!--input 타입의 기본값은 text 이기때문에 생략이 가능하다.-->
+</body> 
+</html>
+<!--웹폼 : 웹페이지에서 사용자 입력을 받는 폼
+           로그인,등록,검색,예약, 등         -->
+
+<!--form name : 자바스크립트와 연동하기 위해, 구분하기 위한 속성
+         method : get 가져오는것(검색,글읽기),post 넣는것(글쓰기,수정)  
+                  차이점 : get은 조건이 많이 노출 post 노출되지 않는다. 
+         action : 요청페이지를 지정하는것     
+         from : 요청한 페이지를 받는것
+                서버를 설치하는 이유: 폼의 기능을 직접확인하기 위해-->

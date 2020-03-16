@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function over(obj){
+          obj.src="media/banana.png";
+        }
+        function out(obj){
+          obj.src="media/apple.png";
+        }
+    </script>
+    <script src="ex6.1.1.js"></script> <!--파일을 불러오는 것-->
+</head> 
+<body>
+    <h3>자바스크립트 동작 위치</h3>
+    <hr>
+    <!--this : 내자신을 가리키는 예약어-->
+    <!--            1..html태그에 직접 선언하는 방법            -->>
+    <img src="media/apple.png"
+    onmouseover="this.src='media/banana.png'"     
+    onmouseout="this.src='media/apple.png'"><hr> 
+    <!--onmouseover : 마우스가 올라갈때 발생하는 이벤트리스너
+        onmouseout  : 마우스가 내려갈때-->
+
+
+    <!--              2..script 태그에 작성하는 방법               -->
+    <img src="media/apple.png"
+    onmouseover="over(this)"     
+    onmouseout="out(this)"> <!--this가 <script> 안에있는 obj에 입력-->
+    <hr>
+
+
+    <!--            3..자바스크립트 코드를 별도파일에 작성하는 방법       -->
+    <img src="media/apple.png"
+    onmouseover="over2(this)"     
+    onmouseout="out2(this)">
+</body>
+</html>

@@ -1,0 +1,35 @@
+2020.03.04
+------------------------
+localhost(127.0.0.1)  : 자신의 PC
+프로그램 순위: https://www.tiobe.com/
+html 주석 : <!-- 주석내용 -->
+--------------------------------------
+form에 action, method 이해를 위한 Server 설치 순서
+1.JDK 설치
+2.이클립스 설치
+-javaw 위치 선택
+-Eclipse IDE for Enterprise Java Developers
+3.Tomcat 설치
+-Host Manager
+-Examples
+-HTTP/Port : 80 수정
+-JRE(JDK) 선택 : C:\Program Files\Java\jdk-11.0.1
+-Manager App -> admin / 1234 -> Examples -> 
+JSP Examples -> Numberguess execute
+-------------------------------------------------------------
+이클립스 실행
+- Workspace는 디폴트 선택
+- New -> Dynamic Web Project 선택
+- Project name: myapp 입력 -> Finish 
+- WebContent 밑에 main.jsp 만들기
+- 실행 -> Apache Server 9.0 선택
+(Always use this server... 선택)
+- Apache Server 설치 위치 선택
+C:\Program Files\Apache Software Foundation\Tomcat 9.0
+-Font 세팅 : https://blog.naver.com/mk6322/221494590334
+-실행 브라우저 선택 : Window - Web Browser -> 크롬 선택
+-myapp에 옆에 오류 없애는 방법
+ 1.myapp에 오른쪽 마우스 선택
+ 2.Properties 선택
+ 3.Java Bulid Path -> Libraries -> Classpath -> Add Library -> Server Runtime -> Tomcat9.0 선택
+---------------------------------------------------------------------------------------------------------
